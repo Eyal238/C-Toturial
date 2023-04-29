@@ -8,7 +8,7 @@ namespace chapter
         {
             int i, j;
             int count = 0;
-            int[,] table = { { 2, 5, 7, 9 }, { 11, 13, 15, 17 }, { 19, 21, 23, 25 } };
+             int[,] table = { { 3, 5, 7, 9 }, { 11, 13, 15, 17 }, { 19, 21, 23, 25 },{ 26, 28, 30, 32 } };
             for(i=0;i<table.GetLength(0);i++)
             {
                 for (j = 0; j < table.GetLength(1);j++)
