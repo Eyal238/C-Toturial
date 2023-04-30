@@ -25,3 +25,31 @@ namespace chapter
         }
     }
 }
+// 3.  כתוב פונקציה המקבלת מטריצה 2 על 5 מסוג מחרוזת. הפונקציה בודקת האם השם "יוסי"(באנגלית אותיות קטנות) נמצא במטריצה. אם כן תחזיר חיובי ואם לא תחזיר שלילי
+
+using System;
+namespace chapter
+{
+    class chapter1
+    {
+        static bool searchName(string[,] names)
+        {
+            int i, j;
+            for(i=0;i<names.GetLength(0);i++)
+            {
+                for(j=0;j<names.GetLength(1);j++)
+                {
+                    if (names[i, j] =="moshe")
+                        return true;
+                }
+            }
+            return false;
+        }
+        static void Main( string[] args)
+        {
+            bool ans;
+            string[,] names = { { "Adi", "Dany", "Rani", "Eli", "Beny" },{"Elbert","moshe","Sigal","Noam","Yoni"}};
+            Console.WriteLine(ans=searchName(names));
+        }
+    }
+}
