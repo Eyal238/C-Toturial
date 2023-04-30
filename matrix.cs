@@ -82,3 +82,32 @@ namespace chapter
         }
     }
 }
+// 4. כתוב פונקציה המקבלת מטריצה בגודל 5 על 5 מסוג מספרים שלמים המחזירה תשובה בוליאנית. הפונקציה תבדוק האם סכום האלכסון הראשי שווה 100. תחזיר חיובי או שלילי 
+using System;
+
+namespace matrix
+{
+    class Program
+    {
+        static bool diagonalHundred(int[,] matrix1)
+        {
+            int i, j=0;
+            int sum = 0;
+            for (i = 0; i < matrix1.GetLength(0); i++)
+            {
+                sum = sum + matrix1[i,j];
+                j++;
+            }
+            if(sum==100)
+                return true;
+            else
+                return false;
+        }
+        static void Main(string[] args)
+        {
+            bool ans;
+            int[,] matrix1 = { { 20, 31, 50, 20, 11 }, { 30, 20, 41, 43, 2 }, { 89, 32, 20, 4, 6 }, { 21, 34, 23, 20, 6 }, { 1, 2, 3, 4, 20 } };
+            Console.WriteLine(ans=diagonalHundred(matrix1));
+        }
+    }
+}
